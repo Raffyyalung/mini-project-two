@@ -35,7 +35,7 @@ class LoginController extends Controller
         if(Auth::user()->user_type == '1'){
             return redirect()->route('admin.dashboard')->with('message', 'Welcome Admin');
         }else{
-            return redirect('/home')->with('status', 'Logged In Successfully');
+            return redirect('/home')->with('message', 'Logged In Successfully');
         }
     }
 
