@@ -41,8 +41,12 @@ Route::prefix('/admin')->middleware(['auth', 'isAdmin'])->group(function() {
         Route::get('/products', 'index')->name('admin.product');
         Route::get('/product/create', 'create')->name('admin.product.create');
         Route::post('/product/store', 'store')->name('admin.product.store');
-        Route::get('/porduct/{id}/edit', 'edit')->name('admin.product.edit');
+        Route::get('/product/{id}/edit', 'edit')->name('admin.product.edit');
         Route::put('/product/{id}/update', 'update')->name('admin.product.update');
         Route::delete('product/{id}/delete', 'destroy')->name('admin.product.destroy');
+        
     });
 });
+
+Route::delete('admin/product/delete/{id}', [ProductController::class, 'delete'])->name('admin.product.delete');
+

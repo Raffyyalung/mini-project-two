@@ -26,7 +26,7 @@ class ProductController extends Controller
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
             'price' => ['required', 'integer'],
-            'status' => ['nullable'],
+            
             'quantity' => ['required', 'integer'],
             'image' => ['nullable'],
         ]);
@@ -38,7 +38,7 @@ class ProductController extends Controller
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
             'price' => $validatedData['price'],
-            'status' => $request->status == true ? '1':'0',
+            
             'quantity' => $request->input('quantity'), // add this line to set the quantity value
         ]);
     
@@ -72,7 +72,7 @@ class ProductController extends Controller
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
             'price' => ['required', 'integer'],
-            'status' => ['nullable'],
+           
             'quantity' => ['required', 'integer'],
             'image' => ['nullable'],
         ]);
@@ -85,7 +85,7 @@ class ProductController extends Controller
                 'name' => $validatedData['name'],
                 'description' => $validatedData['description'],
                 'price' => $validatedData['price'],
-                'status' => $request->status == true ? '1':'0',
+           
                 'quantity' => $validatedData['quantity'], // add this line to update the quantity field
             ]);
     

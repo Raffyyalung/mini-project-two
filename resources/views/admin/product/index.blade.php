@@ -156,11 +156,13 @@
                                                                         
                                                                         <td class="d-flex">
                                                                             <a href="{{route('admin.product.edit', ['id'=>$product->id])}}" class="btn btn-sm btn-success me-1" >Edit</a>
-                                                                            <form action="{{route('admin.product.destroy', ['id'=>$product->id])}}" method="POST">
+                                                                            <form action="{{ route('admin.product.delete', ['id' => $product->id]) }}" method="POST">
                                                                                 @method('DELETE')
                                                                                 @csrf
-                                                                                <input type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?')" value="Delete">
+                                                                                <input type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this product?')" value="Delete">
                                                                             </form>
+                                                                            
+                                                                            
                                                                         </td>
                                                                     </tr>
                                                                     @endif
