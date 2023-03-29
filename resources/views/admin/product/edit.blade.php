@@ -55,14 +55,19 @@
                                 <div class="tab-pane fade" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
                                     <div class="row">
                                         <div class="mb-3 col-12 col-md-4">
+                                            <label>Quantity</label>
+                                            <input type="number" name="quantity" value="{{$product->quantity}}" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="mb-3 col-12 col-md-4">
                                             <label>Price</label>
                                             <input type="number" name="price" value="{{$product->price}}" class="form-control">
                                         </div>
-                                        <div class="mb-3 col-12 col-md-4 mt-1">
-                                            <label>Status</label><br>
-                                            <input type="checkbox" name="status" style="width: 50px; height: 18px" {{$product->status == '1' ? 'checked':''}}>
-                                        </div>
+                                        
                                     </div>
+                                    
                                 </div>
                                 <div class="tab-pane fade" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
                                     <div class="mb-3">

@@ -43,8 +43,17 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Product Name</label>
-                                        <input type="text" name="name" class="form-control">
+                                        <label>Coffee Type</label>
+                                            <select name="name" class="form-control">
+                                                <option value="BARAKO">BARAKO</option>
+                                                <option value="EXCELSIA">EXCELSIA</option>
+                                                <option value="ROBUSTA">ROBUSTA</option>
+                                                <option value="ARABICA">ARABICA</option>
+                                                <option value="HAZELNUT">HAZELNUT</option>
+                                                <option value="VANILLA">VANILLA</option>
+                                                <option value="CARAMEL">CARAMEL</option>
+                                                <option value="DARKCHOCO">DARKCHOCO</option>
+                                                </select>
                                     </div>
                                     <div class="mb-3">
                                         <label>Small Description</label>
@@ -57,11 +66,17 @@
                                             <label>Price</label>
                                             <input type="number" name="price" class="form-control">
                                         </div>
-                                        <div class="mb-3 col-12 col-md-4 mt-1">
-                                            <label>Status</label><br>
-                                            <input type="checkbox" name="status" style="width: 50px; height: 18px">
-                                        </div>
+                                        
                                     </div>
+
+                                    <div class="row">
+                                        <div class="mb-3 col-12 col-md-4">
+                                            <label>Quantity</label>
+                                            <input type="number" name="quantity" class="form-control">
+                                        </div>
+                                        
+                                    </div>
+
                                 </div>
                                 <div class="tab-pane fade" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
                                     <div class="mb-3">
